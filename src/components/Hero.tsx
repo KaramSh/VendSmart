@@ -61,52 +61,121 @@ export default function Hero({ onJoinWaitlist, onSeeHowItWorks }: HeroProps) {
         </div>
 
         <div className="relative animate-fade-in-up-delay-3">
-          <div className="relative rounded-2xl overflow-hidden border border-[#00F0B5]/20 shadow-[0_0_60px_rgba(0,240,181,0.15)]">
+          <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a2332] to-[#0d1521] border border-[#00F0B5]/20 shadow-[0_0_60px_rgba(0,240,181,0.15)] p-6">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00F0B5]/5 to-transparent"></div>
-            <img
-              src="https://images.pexels.com/photos/8961521/pexels-photo-8961521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Vending machine with plug-in device and live restock dashboard"
-              className="w-full h-[600px] object-cover"
-            />
 
-            <div className="absolute top-6 right-6 bg-[#0B1120]/95 backdrop-blur-xl border border-[#00F0B5]/30 rounded-xl p-5 max-w-xs shadow-[0_0_40px_rgba(0,240,181,0.2)]">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 bg-[#00F0B5] rounded-full animate-ping"></div>
-                <span className="text-[#00F0B5] text-xs font-bold tracking-wider">LIVE DATA</span>
-              </div>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center justify-between text-white">
-                  <span>Machine #47</span>
-                  <span className="text-[#00F0B5] font-semibold">Active</span>
+            <div className="relative space-y-4">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-[#00F0B5] rounded-full animate-pulse"></div>
+                    <span className="text-[#00F0B5] text-xs font-bold tracking-wider">LIVE DASHBOARD</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Fleet Overview</h3>
                 </div>
-                <div className="h-px bg-[#00F0B5]/20"></div>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-white">
-                    <span className="text-xs">Coke 12oz</span>
-                    <span className="text-[#00F0B5] font-bold text-xs">3 left</span>
-                  </div>
-                  <div className="flex items-center justify-between text-white">
-                    <span className="text-xs">Lays Classic</span>
-                    <span className="text-[#00F0B5] font-bold text-xs">5 left</span>
-                  </div>
-                  <div className="flex items-center justify-between text-white">
-                    <span className="text-xs">Snickers</span>
-                    <span className="text-gray-500 text-xs">Full</span>
-                  </div>
+                <div className="text-right">
+                  <div className="text-sm text-gray-400">Active Machines</div>
+                  <div className="text-2xl font-bold text-[#00F0B5]">24/27</div>
                 </div>
               </div>
-            </div>
 
-            <div className="absolute bottom-6 left-6">
-              <div className="relative">
-                <div className="absolute -inset-3 bg-[#00F0B5]/20 blur-xl rounded-full"></div>
-                <div className="relative bg-[#0B1120]/95 backdrop-blur-xl border-2 border-[#00F0B5] rounded-lg px-4 py-2 flex items-center gap-2 shadow-[0_0_30px_rgba(0,240,181,0.3)]">
+              <div className="bg-[#0B1120]/60 rounded-xl p-4 border border-[#00F0B5]/10">
+                <div className="text-xs text-gray-400 mb-3 font-semibold">FLEET MAP</div>
+                <div className="relative h-48 bg-[#0d1521] rounded-lg overflow-hidden">
+                  <svg className="w-full h-full" viewBox="0 0 400 200">
+                    <path d="M 0,100 Q 50,80 100,90 T 200,100 T 300,95 T 400,100"
+                          stroke="#00F0B5"
+                          strokeWidth="1"
+                          fill="none"
+                          opacity="0.2"/>
+                    <path d="M 0,120 Q 50,100 100,110 T 200,120 T 300,115 T 400,120"
+                          stroke="#00F0B5"
+                          strokeWidth="1"
+                          fill="none"
+                          opacity="0.2"/>
+
+                    <circle cx="80" cy="90" r="4" fill="#00F0B5" opacity="0.8">
+                      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="150" cy="70" r="4" fill="#00F0B5" opacity="0.8">
+                      <animate attributeName="r" values="4;6;4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="220" cy="110" r="4" fill="#00F0B5" opacity="0.8">
+                      <animate attributeName="r" values="4;6;4" dur="2s" begin="1s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="290" cy="80" r="4" fill="#00F0B5" opacity="0.8">
+                      <animate attributeName="r" values="4;6;4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="350" cy="120" r="4" fill="#00F0B5" opacity="0.8">
+                      <animate attributeName="r" values="4;6;4" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <circle cx="180" cy="140" r="4" fill="#f97316" opacity="0.9">
+                      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <text x="82" y="85" fill="#00F0B5" fontSize="8" fontWeight="bold">23</text>
+                    <text x="152" y="65" fill="#00F0B5" fontSize="8" fontWeight="bold">47</text>
+                    <text x="222" y="105" fill="#00F0B5" fontSize="8" fontWeight="bold">12</text>
+                    <text x="292" y="75" fill="#00F0B5" fontSize="8" fontWeight="bold">08</text>
+                    <text x="352" y="115" fill="#00F0B5" fontSize="8" fontWeight="bold">31</text>
+                    <text x="182" y="135" fill="#f97316" fontSize="8" fontWeight="bold">19</text>
+                  </svg>
+
+                  <div className="absolute top-3 left-3 bg-[#0B1120]/90 backdrop-blur-sm border border-[#00F0B5]/30 rounded-lg px-3 py-1.5">
+                    <div className="text-[10px] text-gray-400">Downtown Region</div>
+                    <div className="text-xs text-white font-semibold">6 Machines</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 mt-3 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 bg-[#00F0B5] rounded-full"></div>
+                    <span className="text-gray-400">Active</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span className="text-gray-400">Needs Restock</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-[#0B1120]/60 rounded-xl p-4 border border-[#00F0B5]/10">
+                  <div className="text-xs text-gray-400 mb-2">Today's Revenue</div>
+                  <div className="text-2xl font-bold text-white">$3,247</div>
+                  <div className="text-xs text-[#00F0B5] mt-1">↑ 12% vs yesterday</div>
+                </div>
+
+                <div className="bg-[#0B1120]/60 rounded-xl p-4 border border-[#00F0B5]/10">
+                  <div className="text-xs text-gray-400 mb-2">Avg Stock Level</div>
+                  <div className="text-2xl font-bold text-white">68%</div>
+                  <div className="text-xs text-gray-400 mt-1">Across all machines</div>
+                </div>
+              </div>
+
+              <div className="bg-[#0B1120]/60 rounded-xl p-4 border border-orange-500/20">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold text-white mb-1">Priority Restocking Alert</div>
+                    <div className="text-xs text-gray-400 mb-2">Machine #19 - City Hall</div>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-orange-500/10 border border-orange-500/30 text-orange-300 px-2 py-0.5 rounded">Coke: 2 left</span>
+                      <span className="bg-orange-500/10 border border-orange-500/30 text-orange-300 px-2 py-0.5 rounded">Chips: 1 left</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between bg-[#0B1120]/60 rounded-xl p-3 border border-[#00F0B5]/20">
+                <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 bg-[#00F0B5] rounded-full animate-pulse"></div>
-                  <div>
-                    <div className="text-[9px] text-[#00F0B5] font-bold tracking-wider">MDB/DEX PORT</div>
-                    <div className="text-xs text-white font-semibold">Connected</div>
-                  </div>
+                  <span className="text-xs text-white font-semibold">MDB/DEX Connected</span>
                 </div>
+                <div className="text-xs text-gray-400">Last sync: 2 min ago</div>
               </div>
             </div>
           </div>
