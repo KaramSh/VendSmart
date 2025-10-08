@@ -58,11 +58,11 @@ export default function WaitlistCTA({ id }: WaitlistCTAProps) {
         </div>
 
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Be the First to Connect<br />Your Fleet
+          Be first to modernize<br />your vending operations.
         </h2>
 
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          Join operators who are transforming their vending operations with real-time intelligence.
+          Join the waitlist to get notified when VendSmart modules ship.
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-12">

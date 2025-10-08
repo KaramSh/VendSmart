@@ -1,20 +1,20 @@
-import { Cpu, Brain, Globe } from 'lucide-react';
+import { Radio, BarChart3, Bell } from 'lucide-react';
 
 const features = [
   {
-    icon: Cpu,
-    title: 'Plug-and-Play Hardware',
-    description: 'Connect to any vending machine in minutes. Universal MDB compatibility with zero configuration.',
+    icon: Radio,
+    title: 'Plug & Play Hardware',
+    description: 'Works with MDB & DEX, no rewiring needed.',
   },
   {
-    icon: Brain,
-    title: 'AI Forecasting',
-    description: 'Predictive analytics that learns your inventory patterns and prevents stockouts before they happen.',
+    icon: BarChart3,
+    title: 'Real-Time Dashboard',
+    description: 'Track sales, inventory, and temperature live.',
   },
   {
-    icon: Globe,
-    title: 'Universal Compatibility',
-    description: 'Works with every major vending machine brand. One platform for your entire fleet.',
+    icon: Bell,
+    title: 'Predictive AI Alerts',
+    description: 'Get notified when to restock before it runs out.',
   },
 ];
 
@@ -23,11 +23,8 @@ export default function Features() {
     <section className="relative py-32 bg-[#0B1120]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-sm font-bold text-[#00F0B5] tracking-[0.3em] mb-4 uppercase">
-            WHAT IT DOES
-          </h2>
-          <p className="text-4xl md:text-5xl font-bold text-white">
-            Intelligence Built In
+          <p className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Built for vending operators<br />who want clarity, not chaos.
           </p>
         </div>
 
